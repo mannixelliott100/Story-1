@@ -2,106 +2,25 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>UFC Story</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Women’s Wrestling Story</title>
 
 <style>
+/* RESET AND BODY */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    margin: 0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background: #f5f5f5;
-}
-
-/* SECTIONS */
-.section {
-    width: 100%;
-    padding: 70px 0;
-}
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-}
-
-/* BACKGROUNDS */
-.white { background: #fff; }
-.red {
-    background: #d60000;
-    color: #fff;
-}
-
-/* TITLE */
-.title {
-    text-align: center;
-    font-size: 3em;
-    font-weight: 800;
-    color: #d60000;
-    text-shadow: 2px 2px 0 #8b0000, 4px 4px 10px rgba(0,0,0,0.4);
-}
-
-/* TEXT */
-p {
-    font-size: 1.15em;
-    line-height: 1.8;
-}
-
-/* SPLIT LAYOUT */
-.split {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.split.reverse {
-    flex-direction: row-reverse;
-}
-
-.text, .visual {
-    flex: 1;
-}
-
-.visual-box {
     background: #fff;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    color: #222;
+    line-height: 1.7;
 }
 
-/* FULL WIDTH */
-.full-width {
-    width: 100%;
-}
-
-/* EXPLAINER HEADINGS */
-.explainer h3 {
-    color: #d60000;
-    border: 2px solid #d60000;
-    padding: 8px 12px;
-    display: inline-block;
-    margin-top: 30px;
-}
-
-/* ANIMATION */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 0.8s ease;
-}
-
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* RESPONSIVE */
-@media(max-width: 800px) {
-    .split {
-        flex-direction: column;
-    }
-}
-
-/* === ADDED HEADER STYLES === */
+/* TOP BAR */
 .top-bar {
     position: fixed;
     top: 10px;
@@ -110,168 +29,230 @@ p {
     font-size: 12px;
     font-family: Arial, sans-serif;
     z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
-.top-left {
-    position: absolute;
-    left: 10px;
+.top-center img {
+    height: 25px;
 }
 
-.top-center {
-    text-align: center;
+/* SECTIONS */
+.section {
     width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.top-right {
-    position: absolute;
-    right: 10px;
-    top: 0;
+.section.white { background: #fff; color: #222; }
+.section.black { background: #111; color: #fff; }
+.section.black p { color: #ddd; }
+
+/* SPLIT LAYOUT */
+.split {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: nowrap;
 }
 
+.split.reverse { flex-direction: row-reverse; }
+
+.text-side, .visual-side {
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* FULL-SIZE VISUALS */
+.visual-side {
+    width: 100%;
+    height: 100%;
+}
+
+.visual-side .flourish-embed {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 80vh;
+}
+
+/* HERO TEXT */
+.hero-text {
+    text-align: center;
+    max-width: 900px;
+    font-size: 1.2em;
+    padding: 60px;
+}
+
+/* HEADINGS */
+h1, h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h1 { font-size: 3em; }
+h2 { font-size: 2em; }
+
+/* REMOVE CONSTRAINTS */
+.container {
+    max-width: none;
+    padding: 0;
+}
+
+.visual-box {
+    padding: 0;
+    margin: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.9s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .split {
+        flex-direction: column;
+    }
+    .text-side, .visual-side {
+        width: 100%;
+        padding: 20px;
+    }
+    .visual-side .flourish-embed { min-height: 60vh; }
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.6em; }
+}
 </style>
 </head>
 
 <body>
 
+<!-- TOP BAR -->
 <div class="top-bar">
-    <div class="top-left">202226944</div>
-
+    <div>202226944</div>
     <div class="top-center">
         <a href="https://www.strath.ac.uk" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/21/University_of_Strathclyde_Coat_of_Arms.svg/1280px-University_of_Strathclyde_Coat_of_Arms.svg.png" alt="Strathclyde Logo" style="height: 25px;">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/21/University_of_Strathclyde_Coat_of_Arms.svg/1280px-University_of_Strathclyde_Coat_of_Arms.svg.png" alt="Strathclyde Logo">
         </a>
     </div>
-
-    <div class="top-right">STORY 2</div>
+    <div>STORY 2</div>
 </div>
 
+<!-- HERO SECTION -->
 <div class="section white reveal">
-    <div class="container">
-        <h1 class="title">
-            STORY 1: THE RISE OF THE UFC AND MIXED MARTIAL ARTS IN GLASGOW
-        </h1>
+    <div class="hero-text">
+        <h1>Story 2 – The Rise of Women’s Wrestling in the 21st Century</h1>
+        <p>
+Over the last 40 years, professional wrestling has grown into a worldwide phenomenon. Icons like Hulk Hogan, Stone Cold, and The Rock brought wrestling into mainstream popularity, setting the stage for stars like John Cena in the 21st century.
+        </p>
+        <p>
+Female wrestlers were often misrepresented until the 2010s, when an all-female division emerged and eventually led to “The Women’s Revolution” of 2025, valuing talent and character over looks, positioning women as main-event stars.
+        </p>
     </div>
 </div>
 
-
+<!-- TIMELINE VISUAL -->
 <div class="section white reveal">
-    <div class="container split">
+    <div class="visual-side full-width">
+        <div class="flourish-embed" data-src="visualisation/28024773"></div>
+    </div>
+</div>
 
-        <div class="text">
+<!-- VISUAL 2 - WHITE -->
+<div class="section white reveal">
+    <div class="split reverse">
+        <div class="visual-side full-width">
+            <div class="flourish-embed" data-src="visualisation/27677179"></div>
+        </div>
+        <div class="text-side">
             <p>
-Since the early 90’s individual martial arts have grown greatly within sport to become more prominent in the mainstream media, international events like the Olympics, and developing into their very own Box Office attractions. The sport of Mixed Martial Arts (MMA) is no exception in this matter, growing from small and struggling unsanctioned contests with no rules, to the fastest rising combat sport today. The Ultimate fighting Championship (UFC) is responsible to bringing MMA directly into the mainstream, facing early struggles in the 1990’s nearly leading to its closure entirely.
+Since the 2015 “Women’s Revolution,” WWE has seen a steadily positive increase in female talent, growing from 39 signed women in 2016 to 67 in 2026 — nearly 79% increase.
             </p>
         </div>
-
-        <div class="visual visual-box">
-            <div class="flourish-embed" data-src="visualisation/27293352"></div>
-        </div>
-
     </div>
 </div>
 
-
-<div class="section white reveal explainer">
-    <div class="container">
-
-        <h3>What is Mixed Martial Arts?</h3>
-        <p>
-Mixed Martial Arts is a combat sport based around what is known as “The Art of 8 Limbs” utilising every aspect of fighting. This means that kicking, punching, knees, elbows and grappling are all legal within its ruleset, making it the most fundamentally demanding combat sport. Its ruleset would be much less limiting to the likes of boxing, wrestling and kickboxing, instead combining them all under one roof to create the most realistic simulation of fighting.
-        </p>
-
-        <h3>What are the rules?</h3>
-        <p>
-The ruleset primarily within the mainstream MMA bodies such as the UFC are full contact contests consisting of 3-5, 5-minute rounds. 3 round fights are often for lower ranking contenders while 5 rounds are often reserved for champions or main event spots. You can win via TKO, Submission and Decision from the 3 Judges’ scorecards. Prohibited attacks are knee of foot strikes to the head of a grounded opponent, eye poking, below the belt attacks, biting and gouging.
-        </p>
-
-        <h3>What is the UFC?</h3>
-        <p>
-The Ultimate Fighting Championship is the world’s leading MMA organisation. Starting from a no rules “anything goes” contest The UFC faced much controversy and difficulty developing as a brand, with political backlash from senators like John McCain nearly leading to the outright ban to the sport. In the early 2000’s the ruleset we know today would be developed and would lead to MMA’s sanctioning as a legitimate sport. Still facing financial struggle, the UFC would dive into reality TV, creating the show The Ultimate Fighter, which was a tournament style episodic show following to the day to day lives of the fighters competing against each other as they live in a shared space. This show would become widely popular and save the organisation from effectively dying, sparking now over 30 seasons of the show.
-        </p>
-
-        <h3>How has it effected Glasgow?</h3>
-        <p>
-The UFC’s significant global growth has influenced the development of Mixed Martial Arts (MMA) in Glasgow. Dedicated MMA gyms such as the Griphouse, founded 5 years after the UFC’s sanctioning would emerge, producing fighters who would eventually compete in the UFC and drive-up interest in the sport. This would lead to major MMA events in Glasgow after the UFC’s inaugural 2015 Fight Night show in the OVO Hydro showing Scotland’s interest and marketability. MMA Gyms like the Griphouse would develop fighters like Robert Whiteford, emerging as Scotland’s first ever UFC fighter during the sport’s 2014 boom. This would inspire later Glasgow talents like Paul Craig and Joanne Wood to enter the sport and continue to drive further interest towards Glasgow’s untapped potential.
-        </p>
-
-    </div>
-</div>
-
-
-<div class="section white reveal">
-    <iframe class="full-width" src="https://uploads.knightlab.com/storymapjs/5f7f3c309f2b408b860e120e651e105c/mma/index.html" height="800"></iframe>
-</div>
-
-
-<div class="section red reveal">
-    <div class="container split reverse">
-
-        <div class="text">
+<!-- VISUAL 3 - BLACK -->
+<div class="section black reveal">
+    <div class="split">
+        <div class="text-side">
             <p>
-From 1993 until 2025 there has been a significant growth for the UFC’s capacity to put out events. With a combination of demand, interest and budget the UFC had a small growth from the 90’s to the mid 2000’s before its popularity began to skyrocket past 2005, going from 3-5 yearly shows to 43 by 2014. (Per Wikipedia) 
+In 2019, AEW was formed to rival WWE’s monopoly, developing its own women’s division which grew from 14 to 56 signed women by 2026 — a 300% increase over 7 years.
             </p>
         </div>
-
-        <div class="visual visual-box">
-            <div class="flourish-embed" data-src="visualisation/27772716"></div>
+        <div class="visual-side full-width">
+            <div class="flourish-embed" data-src="visualisation/28122283"></div>
         </div>
-
     </div>
 </div>
 
-
+<!-- VISUAL 4 -->
 <div class="section white reveal">
-    <div class="container split">
-
-        <div class="visual visual-box">
-            <div class="flourish-embed" data-src="visualisation/27910112"></div>
-        </div>
-
-        <div class="text">
-            <p>
-  This increase has had a strong effect on events taking place across the world including Glasgow resulting in the city receiving its very own UFC events in 2015 and 2017. These events both brought in over 10,000 spectators and approximately £1.5 million in their gate earnings alone, showcasing the marketability Glasgow has for largescale combat sports events. This is important as it has resulted in an increase in major MMA events from other large organisations like PFL and Cage Warriors, making Glasgow a much more frequent city to host. Cage Warriors events have become more frequent in Glasgow in the past few years hosting multiple events in 2024, and now having more scheduled for 2026. This info comes from the sporting news, Wikipedia, Cage Warriors and PFL. 
-          </p>
-        </div>
-
+    <div class="visual-side full-width">
+        <div class="flourish-embed" data-src="visualisation/28085202"></div>
     </div>
 </div>
 
-
-<div class="section red reveal">
-    <div class="container split reverse">
-
-        <div class="text">
-            <p>
- What’s most interesting about Glasgow’s MMA growth is its developing infrastructure. As Glasgow’s Martial Arts economy continuous to develop its important to note that it is still very much grassroots. Interestingly, Glasgow’s independence in the martial arts seen is impressive as out of its 65 registered martial arts schools, 51 of these are single-owner operations which is 78% of all martial arts schools in Glasgow. These statistics from Rentechdigital find as of October 15, 2025, 14 martial arts schools in Glasgow belong to larger chain brands which is only 21.54%. Glasgow’s youthful growth in the MMA scene is even more significant when looking their average gym age of 5 years and 7 months. This staggering figure helps us understand how the UFC’s recent impact on the city has continued to support its growth, with new schools springing up frequently.  
-           </p>
-        </div>
-
-        <div class="visual visual-box">
-            <div class="flourish-embed" data-src="visualisation/27604280"></div>
-        </div>
-
-    </div>
-</div>
-
-
+<!-- VISUAL 5 -->
 <div class="section white reveal">
-    <div class="container split">
-
-        <div class="visual visual-box">
-            <div class="flourish-embed" data-src="visualisation/27604010"></div>
+    <div class="split">
+        <div class="visual-side full-width">
+            <div class="flourish-embed" data-src="visualisation/28087074"></div>
         </div>
-
-        <div class="text">
+        <div class="text-side">
             <p>
-These gyms across Glasgow have had a 2.94% increase from 2023 as more quickly begin to open and more events take place. Its development of the Scottish Mixed Martial Arts Federation (SCOT-MMAF) in 2017 has greatly encouraged this growth as it allows for a much greater opportunity for sanctioned competition to take place within Scotland. MMA organisations like BMF have been able to operate within Scotland and give spotlight to its talent, while local athletes from Glasgow and other Scottish cities something to work towards. Lastly this has opened the opportunity to develop being an MMA Trainer or Fighter as a possible career option, as the economy becomes recognised more and more a s a legitimate sport, athletes and trainers can dedicate much more of their time in developing their skills.  
+Athletes like Rhea Ripley became worldwide stars, reflecting a boom in women’s wrestling post-2020. Social media shows 7 of the top-followed wrestlers in 2026 are women.
             </p>
         </div>
-
     </div>
 </div>
 
+<!-- VISUAL 6 - BLACK -->
+<div class="section black reveal">
+    <div class="split reverse">
+        <div class="visual-side full-width">
+            <div class="flourish-embed" data-src="visualisation/27918499"></div>
+        </div>
+        <div class="text-side">
+            <p>
+Despite growth, inequality persists: only 33% of WWE signed talent are women in 2026.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- VISUAL 7 - BLACK -->
+<div class="section black reveal">
+    <div class="split">
+        <div class="visual-side full-width">
+            <div class="flourish-embed" data-src="visualisation/28122168"></div>
+        </div>
+        <div class="text-side">
+            <p>
+AEW shows an even larger divide: only 24% of signed talent are women (52 women vs 163 men) as of 2026.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPT -->
 <script src="https://public.flourish.studio/resources/embed.js"></script>
-
 <script>
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
