@@ -106,7 +106,7 @@ p {
 
 <body>
 
-<!-- TITLE -->
+
 <div class="section white reveal">
     <div class="container">
         <h1 class="title">
@@ -115,7 +115,7 @@ p {
     </div>
 </div>
 
-<!-- INTRO + VISUAL 1 -->
+
 <div class="section white reveal">
     <div class="container split">
 
@@ -132,7 +132,7 @@ Since the early 90’s individual martial arts have grown greatly within sport t
     </div>
 </div>
 
-<!-- EXPLAINER SECTION (NEWLY ADDED) -->
+
 <div class="section white reveal explainer">
     <div class="container">
 
@@ -159,12 +159,12 @@ The UFC’s significant global growth has influenced the development of Mixed Ma
     </div>
 </div>
 
-<!-- STORYMAP (VISUAL 2) -->
+
 <div class="section white reveal">
     <iframe class="full-width" src="https://uploads.knightlab.com/storymapjs/5f7f3c309f2b408b860e120e651e105c/mma/index.html" height="800"></iframe>
 </div>
 
-<!-- RED SECTION + VISUAL 3 -->
+
 <div class="section red reveal">
     <div class="container split reverse">
 
@@ -181,7 +181,7 @@ From 1993 until 2025 there has been a significant growth for the UFC’s capacit
     </div>
 </div>
 
-<!-- WHITE SECTION + VISUAL 4 -->
+
 <div class="section white reveal">
     <div class="container split">
 
@@ -198,7 +198,7 @@ From 1993 until 2025 there has been a significant growth for the UFC’s capacit
     </div>
 </div>
 
-<!-- RED SECTION + VISUAL 5 -->
+
 <div class="section red reveal">
     <div class="container split reverse">
 
@@ -215,7 +215,7 @@ From 1993 until 2025 there has been a significant growth for the UFC’s capacit
     </div>
 </div>
 
-<!-- WHITE SECTION + VISUAL 6 -->
+
 <div class="section white reveal">
     <div class="container split">
 
