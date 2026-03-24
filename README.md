@@ -101,10 +101,38 @@ p {
     }
 }
 
+/* === ADDED HEADER STYLES === */
+.top-bar {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    z-index: 9999;
+}
+
+.top-left {
+    position: absolute;
+    left: 10px;
+}
+
+.top-center {
+    text-align: center;
+    width: 100%;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
 </style>
 </head>
 
 <body>
+
 <div class="top-bar">
     <div class="top-left">202226944</div>
 
@@ -113,6 +141,9 @@ p {
             <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/21/University_of_Strathclyde_Coat_of_Arms.svg/1280px-University_of_Strathclyde_Coat_of_Arms.svg.png" alt="Strathclyde Logo" style="height: 25px;">
         </a>
     </div>
+
+    <div class="top-right">STORY 2</div>
+</div>
 
 <div class="section white reveal">
     <div class="container">
