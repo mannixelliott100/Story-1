@@ -105,7 +105,14 @@ p {
 </head>
 
 <body>
+<div class="top-bar">
+    <div class="top-left">202226944</div>
 
+    <div class="top-center">
+        <a href="https://www.strath.ac.uk" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/21/University_of_Strathclyde_Coat_of_Arms.svg/1280px-University_of_Strathclyde_Coat_of_Arms.svg.png" alt="Strathclyde Logo" style="height: 25px;">
+        </a>
+    </div>
 
 <div class="section white reveal">
     <div class="container">
